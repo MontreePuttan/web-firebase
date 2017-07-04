@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+
+	<title>Firebase Realtime DB</title>
+</head>
+<body>
+	<div class="container">
+		<div>
+			<h1>Firebase - Realtime DataBase On Web</h1>
+			<br>
+			<div class="form-gruop">
+				<label for="usr">E-Mail : </label>
+				<input type="email" placeholder="Enter your E-mail" class="form-control" id="email">
+			</div>
+			<div class="form-gruop">
+				<label for="pwd">Password : </label>
+				<input type="password" placeholder="Enter your Password" class="form-control" id="password">
+				<label for="add">Address : </label>
+				<textarea name="name" id="address" cols="80" rows="8" class="form-control"></textarea>
+			</div>
+			<button id="btnSave" name="Save" class="btn btn-primary" onclick="saveOnClick()">Save</button>
+			&nbsp;&nbsp;&nbsp;
+			<button id="btnDel" class="btn btn-danger" onclick="delOnClick()">Delete</button>
+			&nbsp;&nbsp;&nbsp;
+			<button id="btnUpdate" class="btn btn-success" onclick="updateData()">Update</button>
+			&nbsp;&nbsp;&nbsp;
+		</div>
+	</div>	
+	<br>
+
+
+<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCqT_1eOzzxs1O6EshKBw_BjVoI4Lv3ons",
+    authDomain: "fir-realtime-f5ca3.firebaseapp.com",
+    databaseURL: "https://fir-realtime-f5ca3.firebaseio.com",
+    projectId: "fir-realtime-f5ca3",
+    storageBucket: "fir-realtime-f5ca3.appspot.com",
+    messagingSenderId: "625294133256"
+  };
+  firebase.initializeApp(config);
+</script>
+
+</body>
+</html>
